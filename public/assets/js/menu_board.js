@@ -2,6 +2,9 @@
  
 $(function() {
 	// 'use strict';
+
+	// this code is not used because all observer events will be handled by the views
+	
     $('#checkout').on('click', function(event){
     $("#modal").modal({show:true});
     console.log('modal function activated');

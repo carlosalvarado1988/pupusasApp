@@ -3,6 +3,7 @@ var _ = require('underscore');
 var express = require('express');
 var app = express();
 var path = require('path');
+var config = require('config');
 
 _.each([
   'app/controllers', 
@@ -31,7 +32,7 @@ passport.use(User.createStrategy());
 passport.serializeUser(User.serializeUser());
 passport.deserializeUser(User.deserializeUser());
 var mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost/pidamosya', function(err, res) {
+mongoose.connect(config.db, function(err, res) {
   if(err) {
     console.log('ERROR: connecting to Database. ' + err);
   } else {
