@@ -1,0 +1,72 @@
+<div class="container">
+  <h2>Modal Demo</h2>
+
+  <div class="row text-center">
+      <h3>The Basic Modal</h3>
+      <a href="#" class="btn btn-lg btn-success" data-toggle="modal" data-target="#basicModal">Click to open Modal</a>
+  </div>
+  <hr>
+  <div class="row text-center">
+      <h3>The Large Modal</h3>
+      <a href="#" class="btn btn-lg btn-primary" data-toggle="modal" data-target="#largeModal">Click to open Modal</a>
+  </div>
+  <hr>
+  <div class="row text-center">
+      <h3>The Small Modal</h3>
+      <a href="#" class="btn btn-lg btn-danger" data-toggle="modal" data-target="#smallModal">Click to open Modal</a>
+  </div>
+
+</div>
+
+<div class="modal fade" id="basicModal" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
+  
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+        
+            <h4 class="modal-title" id="myModalLabel">Basic Modal</h4>
+      </div>
+      <div class="modal-body">
+        <h3>Modal Body</h3>
+        <div class="text-center" style="padding:50px 0">
+  <div class="logo">login</div>
+  <!-- Main Form -->
+  <div class="login-form-1">
+
+  
+    <form id="login-form"  action='/login' method='POST' class="text-left">
+      <div class="login-form-main-message"></div>
+      <div class="main-login-form">
+        <div class="login-group">
+          <div class="form-group">
+            <label for="lg_username" class="sr-only">Username</label>
+            <input type="text" class="form-control" id="lg_username" name="username" placeholder="username">
+          </div>
+          <div class="form-group">
+            <label for="lg_password" class="sr-only">Password</label>
+            <input type="password" class="form-control" id="lg_password" name="password" placeholder="password">
+          </div>
+          <div class="form-group login-group-checkbox">
+            <input type="checkbox" id="lg_remember" name="lg_remember">
+            <label for="lg_remember">remember</label>
+          </div>
+        </div>
+        <button type="submit" class="login-button"><i class="fa fa-chevron-right"></i></button>
+      </div>
+      <div class="etc-login-form">
+        <p>forgot your password? <a href="/forgot_password">click here</a></p>
+        <p>new user? <a href="/registration">create new account</a></p>
+      </div>
+    </form>
+  </div>
+  <!-- end:Main Form -->
+</div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>

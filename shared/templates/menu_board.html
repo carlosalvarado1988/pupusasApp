@@ -1,0 +1,856 @@
+<style type="text/css">
+
+ /*for this menu*/
+ .panel-heading a:after {
+  font-family:'Glyphicons Halflings';
+  content:"\e114";
+  float: right;
+  color: grey;
+}
+
+.price{
+	font-weight: bold;
+	font-size: 25px;
+}
+
+
+.header {
+  /*border: 2px solid red;*/
+  margin: 1;
+}
+
+.main {
+  /*border: 2px solid blue;*/
+  margin: 1px;
+}
+
+.pull-right{
+  /*border: 2px solid black;*/
+}
+.footer {
+  /*border: 2px solid black;*/
+  margin-top: 2px;
+}
+
+h1 {
+	text-align: center;
+  margin:0;
+}
+.container {
+  height: 100%;
+  overflow-y: hidden;
+}
+
+.panel {
+	margin: 2px;
+	
+}
+
+div {
+  text-align: center;
+}
+
+
+table {
+  border-bottom-style: inset;
+
+}
+
+th, td {
+ width: 25%;
+ border: 1px solid #000;
+ text-align: center
+}
+
+td.sub{
+  font-weight: bold;
+}
+
+
+
+.modal-backdrop.in {
+  filter: alpha(opacity=50);
+  opacity: .7;
+}
+
+
+#bootstrapSelectForm .selectContainer .form-control-feedback {
+    /* Adjust feedback icon position */
+    right: -15px;
+}
+
+
+
+</style>
+
+
+
+
+<div class="container-fluid">
+
+  <!-- the header  -->
+  <div class="row header">
+    <div class="panel panel-success">
+      <div class="panel-heading"><h1>Order in [[Place]]</h1>
+      </div>
+ 				 <!-- <div class="panel-body"> <input class="form-control input-lg" id="inputlg" type="text" placeholder="Search Pupuseria">
+        </div> -->
+      </div>
+    </div>
+
+
+
+    <div class="row main">
+      <div class="col-md-8" border="1px solid green">
+       <h3 align="left">Menu</h3>
+
+       <div class="panel-group" id="accordion">
+         <div class="panel panel-default" id="panel1">
+           <div class="panel-heading">
+             <h4 class="panel-title">
+               <a data-toggle="collapse" data-target="#collapseOne" 
+               href="#collapseOne">
+               Pupusas
+             </a>
+           </h4>
+
+         </div>
+
+
+         <div id="collapseOne" class="panel-collapse collapse in">
+          <div class="panel-body">
+           <ul class="list-group-group"> 
+
+             <!-- Item 1  -->
+             <li class="list-group-item"> 
+
+              <div class="panel panel-default">
+                <div class="panel-body">
+                  <!-- bloque izquierda item -->
+                  <span class="place col-xs-3">
+                   <img class="img-responsive img-centered img-rounded" src="/img/menu/queso_loroco.jpeg" alt="" width="120" height="90">
+                   <!-- <img class="pull-left" src="imagen.jpg" class="img-rounded" alt="" width="70" height="60"> -->
+                 </span> 
+                 <!-- bloque central item -->
+                 <span class="place col-xs-6">
+                   <h3 class="panel-title place">Queso con Loroco </h3> 
+                   <br>
+                   <a href="#" class="page-scroll" data-toggle="modal" data-target="#detalles_item_modal">
+                   <button type="button" class="btn btn-default btn-sm">Detalles</button></a>
+
+                 </span> 
+
+                 <!-- bloque derecha item -->
+                 <span class="place col-xs-3">
+
+                   <!-- [[price]]--><span class='price'>$0.75 </span>  
+                   <span> 
+
+                    <div class="input-group">
+                     <span class="input-group-btn">
+                       <button type="button" id='incre_decre' class="btn btn-default btn-number" disabled="disabled" data-type="minus" data-field="quant[1]">
+                         <span class="glyphicon glyphicon-minus"></span>
+                       </button>
+                     </span>
+                     <input type="text" name="quant[1]" class="form-control input-number" value="1" min="1" max="10">
+                     <span class="input-group-btn">
+                       <button type="button" class="btn btn-default btn-number" data-type="plus" data-field="quant[1]">
+                         <span class="glyphicon glyphicon-plus"></span>
+                       </button>
+                     </span>
+                     <br>
+                   </div>	
+                   <button type="button" class="btn btn-success btn-sm">
+                    <span class="glyphicon glyphicon-cutlery"></span> Order
+                  </button></span>
+                </span>
+              </div>
+            </div>
+          </li>
+
+          <!-- Item 2 -->
+          <li class="list-group-item"> 
+
+            <!-- bloque izquierda item -->
+            <div class="panel panel-default">
+              <div class="panel-body">
+                <span class="place col-xs-3">
+                 <img class="img-rounded pull-left" src="/img/menu/revuelta.jpeg" alt="" width="120" height="90">
+               </span> 
+               <!-- bloque central item -->
+               <span class="place col-xs-6">
+                 <h3 class="panel-title place">Revuelta </h3> <!--[[menu.item]] -->
+                 <br><a class="pull right" href="#">Detalles</a>
+
+               </span> 
+
+               <!-- bloque derecha item -->
+               <span class="place col-xs-3">
+
+                 <!-- [[price]]--><span class='price'>$0.60 </span>  
+                 <span> 
+                  <button type="button" class="btn btn-default btn-sm">
+                    <span class="glyphicon glyphicon-cutlery"></span> Order
+                  </button></span>
+                </span>
+              </div>
+            </div>
+          </li>
+          <li class="list-group-item"> 
+           <!-- bloque izquierda item -->
+           <div class="panel panel-default">
+            <div class="panel-body">
+              <span class="place col-xs-3">
+               <img class="img-rounded pull-left" src="/img/menu/chicharron.jpeg" alt="" width="120" height="90">
+             </span> 
+             <!-- bloque central item -->
+             <span class="place col-xs-6">
+               <h3 class="panel-title place">Chicharron </h3> <!--[[menu.item]] -->
+               <br><a class="pull right" href="#">Detalles</a>
+
+             </span> 
+
+             <!-- bloque derecha item -->
+             <span class="place col-xs-3">
+
+               <!-- [[price]]--><span class='price'>$0.75 </span>  
+               <span> 
+                <button type="button" class="btn btn-default btn-sm">
+                  <span class="glyphicon glyphicon-cutlery"></span> Order
+                </button></span>
+              </span>
+            </div>
+          </div>
+
+
+        </li>
+      </ul>
+    </div> 			  			
+  </div>
+</div>
+
+<div class="panel panel-default" id="panel2">
+  <div class="panel-heading">
+    <h4 class="panel-title">
+      <a data-toggle="collapse" data-target="#collapseTwo" 
+      href="#collapseTwo" class="collapsed">
+      Especialidades
+    </a>
+  </h4>
+</div>
+
+<div id="collapseTwo" class="panel-collapse collapse">
+  <div class="panel-body">
+   <ul class="list-group-group"> 
+
+     <!-- Item 1  -->
+     <li class="list-group-item"> 
+      <!-- bloque izquierda item -->
+      <div class="panel panel-default">
+        <div class="panel-body">
+          <span class="place col-xs-3">
+           <<img class="pull-left" src="/img/menu/pan_con_pollo.jpeg" class="img-rounded" alt="" width="120" height="90">
+         </span> 
+         <!-- bloque central item -->
+         <span class="place col-xs-6">
+           <h3 class="panel-title place">Pan con Pollo </h3> <!--[[menu.item]] -->
+           <br><a class="pull right" href="#">Detalles</a>
+
+         </span> 
+
+         <!-- bloque derecha item -->
+         <span class="place col-xs-3">
+
+           <!-- [[price]]--><span class='price'>$2.75 </span>  
+           <span> 
+            <button type="button" class="btn btn-default btn-sm">
+              <span class="glyphicon glyphicon-cutlery"></span> Order
+            </button></span>
+          </span>
+        </div>
+      </div>
+    </li>
+
+    <!-- Item 2 -->
+    <li class="list-group-item"> 
+
+      <!-- bloque izquierda item -->
+      <div class="panel panel-default">
+        <div class="panel-body">
+          <span class="place col-xs-2">
+           <img class="pull-left" src="imagen.jpg" class="img-rounded" alt="" width="70" height="60">
+         </span> 
+         <!-- bloque central item -->
+         <span class="place col-xs-7">
+           <h3 class="panel-title place">Tamales de Gallina </h3> <!--[[menu.item]] -->
+           <br><a class="pull right" href="#">Detalles</a>
+
+         </span> 
+
+         <!-- bloque derecha item -->
+         <span class="place col-xs-3">
+
+           <!-- [[price]]--><span class='price'>$0.50 </span>  
+           <span> 
+            <button type="button" class="btn btn-default btn-sm">
+              <span class="glyphicon glyphicon-cutlery"></span> Order
+            </button></span>
+          </span>
+        </div>
+      </div>
+    </li>
+    <li class="list-group-item"> 
+     <!-- bloque izquierda item -->
+     <div class="panel panel-default">
+      <div class="panel-body">
+        <span class="place col-xs-2">
+         <img class="pull-left" src="imagen.jpg" class="img-rounded" alt="" width="70" height="60">
+       </span> 
+       <!-- bloque central item -->
+       <span class="place col-xs-7">
+         <h3 class="panel-title place">Tamales de Elote </h3> <!--[[menu.item]] -->
+         <br><a class="pull right" href="#">Detalles</a>
+
+       </span> 
+
+       <!-- bloque derecha item -->
+       <span class="place col-xs-3">
+
+         <!-- [[price]]--><span class='price'>$0.40</span>  
+         <span> 
+          <button type="button" class="btn btn-default btn-sm">
+            <span class="glyphicon glyphicon-cutlery"></span> Order
+          </button></span>
+        </span>
+      </div>
+    </div>
+
+
+  </li>
+</ul>
+</div>
+</div>
+</div>
+<div class="panel panel-default" id="panel3">
+  <div class="panel-heading">
+   <h4 class="panel-title">
+    <a data-toggle="collapse" data-target="#collapseThree"
+    href="#collapseThree" class="collapsed">
+    Bebidas
+  </a>
+</h4>
+
+</div>
+<div id="collapseThree" class="panel-collapse collapse">
+  <div class="panel-body">
+   <ul class="list-group-group"> 
+
+     <!-- Item 1  -->
+     <li class="list-group-item"> 
+      <!-- bloque izquierda item -->
+      <div class="panel panel-default">
+        <div class="panel-body">
+          <span class="place col-xs-2">
+           <img class="pull-left" src="imagen.jpg" class="img-rounded" alt="" width="70" height="60"><!-- [[place.image]]-->
+         </span> 
+         <!-- bloque central item -->
+         <span class="place col-xs-7">
+           <h3 class="panel-title place">Gaseosa </h3> <!--[[menu.item]] -->
+           <br><a class="pull right" href="#">Detalles</a>
+
+         </span> 
+
+         <!-- bloque derecha item -->
+         <span class="place col-xs-3">
+
+           <!-- [[price]]--><span class='price'>$0.60 </span>  
+           <span> 
+            <button type="button" class="btn btn-default btn-sm">
+              <span class="glyphicon glyphicon-cutlery"></span> Order
+            </button></span>
+          </span>
+        </div>
+      </div>
+    </li>
+
+    <!-- Item 2 -->
+    <li class="list-group-item"> 
+
+      <!-- bloque izquierda item -->
+      <div class="panel panel-default">
+        <div class="panel-body">
+          <span class="place col-xs-2">
+           <img class="pull-left" src="imagen.jpg" class="img-rounded" alt="" width="70" height="60">
+         </span> 
+         <!-- bloque central item -->
+         <span class="place col-xs-7">
+           <h3 class="panel-title place">Te helado </h3> <!--[[menu.item]] -->
+           <br><a class="pull right" href="#">Detalles</a>
+
+         </span> 
+
+         <!-- bloque derecha item -->
+         <span class="place col-xs-3">
+
+           <!-- [[price]]--><span class='price'>$0.90 </span>  
+           <span> 
+            <button type="button" class="btn btn-default btn-sm">
+              <span class="glyphicon glyphicon-cutlery"></span> Order
+            </button></span>
+          </span>
+        </div>
+      </div>
+    </li>
+    <li class="list-group-item"> 
+     <!-- bloque izquierda item -->
+     <div class="panel panel-default">
+      <div class="panel-body">
+        <span class="place col-xs-2">
+         <img class="pull-left" src="imagen.jpg" class="img-rounded" alt="" width="70" height="60">
+       </span> 
+       <!-- bloque central item -->
+       <span class="place col-xs-7">
+         <h3 class="panel-title place">Chocolate </h3> <!--[[menu.item]] -->
+         <br><a class="pull right" href="#">Detalles</a>
+
+       </span> 
+
+       <!-- bloque derecha item -->
+       <span class="place col-xs-3">
+
+         <!-- [[price]]--><span class='price'>$0.40</span>  
+         <span> 
+          <button type="button" class="btn btn-default btn-sm">
+            <span class="glyphicon glyphicon-cutlery"></span> Order
+          </button></span>
+        </span>
+      </div>
+    </div>
+
+
+  </li>
+</ul>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="col-md-4"> 
+
+ <div class="conteiner">
+   <div class="cart-order large-rounded">
+    <h3>
+      Your Order
+    </h3>
+
+    <div id="estimated-delivery-time-region"></div>
+    <div id="location-region" data-bhw="CartAddress" data-bhw-path="CartAddress">
+      <div class="well"><div class="close-address-button" style="display:none">×</div>
+      <div class="edit-address-area">
+       <div class="address-region">
+        <div><span class="address">Your Address:</span>
+          <div class="address-goes-here empty-address"> [[Cust address]]
+            <a class="edit-address-button">Edit Address</a>
+          </div>  
+          <div><span class="address-issue badge">We need your exact delivery address.</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div id="cart-container-region">
+  <div data-bhw="OrderSummary" data-bhw-path="OrderSummary">
+    <div class="order-details">
+      <h4>Order Details</h4>
+
+      <table class="order-detalis" align="center">
+        <tbody>
+          <tr>
+            <th>Item</th><th>QTY</th><th>Price</th> 
+          </tr>
+          <tr class="itemdetails">
+            <td class="itemname">Pupusa de Queso</td>
+            <td class="itemqty">3</td>
+            <td class="itempr">$2.25</td>
+          </tr> 
+        </tbody>
+      </table>
+      <br><br>
+      
+      <div id="items-region"><div></div></div>      
+      <div class="cart-actions"></div>
+      <div id="coupons-region"><div> </div></div>
+      <div id="totals-region">
+
+        <!-- <div> -->
+        <table class="cart-total" align="center">
+
+          <tbody><tr class="subtotal">
+            <td class="sub">Subtotal</td>
+            <td class="sub-value">$0.00</td>
+          </tr>
+
+          <tr class="tax">
+            <td class="sub">Sales Tax</td>
+            <td class="sub-value">$0.00</td>
+          </tr>
+
+          <tr class="processing-fee">
+            <td class="sub">Processing Fee</td>
+            <td class="sub-value">$0.05
+            </td></tr>
+
+            <tr class="total-row">
+              <td class="sub">Total</td>
+              <td class="sub-value">$0.05
+              </td></tr>
+
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+    </div>  
+    <!-- order summary termina aqui -->
+    <div id="coupon-form-region">
+     <div><a>Apply a coupon</a>
+
+      <form style="display:none;">
+        <div class="badge full-width bottom-margin" style="display:none;"></div>
+        <input type="text" id="couponCode" name="couponCode" placeholder="Enter code">
+        <button id="applyCoupon" type="submit">Apply</button>
+        <i class="cart-spinner" style="display:none"></i>
+        <div style="clear:both;"></div>
+      </form>
+    </div>
+  </div>
+
+  <div id="delivery-time-region"><div></div></div>
+</div>
+<!-- cart region termina aqui            -->
+</div> 
+<!-- cart large rounded termina aqui -->
+
+<div id="order-type-region"></div>
+<div id="issues-region"><div>
+  <span class="issue badge">You must have at least one item in your cart to checkout.</span>
+</div>
+</div>
+<br>
+<div id="checkout-region">
+  <div class="complete-order">
+
+
+
+   <span class="delivery">
+    <input type="checkbox" id='deliveryCheckbox' checked data-toggle="toggle" data-on="Pick it Up  " data-off=" Delivery ">
+  </span>   
+  <span class="checkout">
+  <a href="#" class="btn btn-lg btn-success" data-toggle="modal" data-target="#payment_modal">
+    <button id="checkout" type="button" class="btn btn-success" > Checkout!</button></a>
+  </span>
+
+</div>
+</div>
+
+</div>
+<!-- coneiter               	 -->
+</div>
+<!-- col-md-4 -->
+</div>
+<!-- row main -->
+
+
+<div class="row">
+ <div style='position:fixed;bottom:0;left:0; background:lightgray;width:100%;'>
+ <div align="center"><span>PUPUSAS EL SALVADOR</span> <span><a href=''>link</a></span>
+ </div>
+</div>
+</div>
+
+</div>
+<!-- container fluid -->
+
+
+
+
+
+
+<div class="modal fade" id="payment_modal" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
+  
+    <div class="modal-dialog">
+          <div class="modal-content">
+                    <div class="modal-header">
+                      <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                        
+                          <h4 class="modal-title" id="myModalLabel">PAYMENT METHOD</h4>
+                    </div>
+               <div class="modal-body">
+
+                    <!-- body modal  -->
+
+                    
+
+                     <!--  <form action="/checkout" method="post" role="form"> -->
+
+                        <div class="form-group">
+
+                           <div class="container">
+
+
+
+                          <div class="row">
+                      <!-- You can make it whatever width you want. I'm making it full width
+                            on <= small devices and 4/12 page width on >= medium devices -->
+
+                            <div class="col-xs-12 col-md-6">
+                      <!--  -->
+                      
+                          <!-- CREDIT CARD FORM STARTS HERE -->
+                          <!-- If you're using Stripe for payments -->
+              <!-- <script type="text/javascript" src="https://js.stripe.com/v2/"></script> -->
+
+
+                          <div class="panel panel-default credit-card-box">
+                              <div class="panel-heading display-table" >
+                                  <div class="row display-tr">
+                                  
+                                  <span> <h3 class="panel-title display-td pull-left">TOTAL: $0.00 </h3></span>
+                                      <span class="display-td">                            
+                                          <img class="img-responsive pull-right" src="http://i76.imgup.net/accepted_c22e0.png">
+                                      </span>
+                                  </div>                    
+                              </div>
+
+
+                              <div class="panel-body">
+
+
+                                  <form role="form" id="payment-form">
+                                       <!-- <fieldset> -->
+                                      <div class="row">
+                                          <div class="col-md-12">
+                                          <div class="form-group" >
+                                                  <label for="nameonCard">Name on Card*</label>
+                                                  <div class="input-group">
+                                                      <input 
+                                                          type="text"
+                                                          class="form-control "
+                                                          name="cardNumber"
+                                                          placeholder="Exact Name on Card"
+                                                          required autofocus 
+                                                      />
+                                                       <span class="input-group-addon"></span>
+                                                     </div>
+                                              </div>
+
+                                              
+                                              <div class="form-group">
+                                                  <label for="cardNumber">Card Number*</label>
+                                                  <div class="input-group">
+                                                      <input 
+                                                          type="tel"
+                                                          class="form-control"
+                                                          name="cardNumber"
+                                                          placeholder="Valid Card Number"
+                                                          autocomplete="cc-number"
+                                                          required autofocus 
+                                                      />
+                                                      <span class="input-group-addon"><i class="fa fa-credit-card"></i></span>
+                                                  </div>
+                                              </div>                            
+                                          </div>
+                                      </div>
+
+                                      <div class="row">
+                                          <div class="col-xs-12 col-md-12">
+                                              
+                                        <span class="col-xs-8 col-md-8">
+                                        <div class="form-group">
+
+                             <label for="cardExpiry " ><span class="hidden-xs">Expiration </span>
+                                            <span class="visible-xs-inline">Exp</span> Date*</label>
+                                            
+                                              </div>
+
+                                              <div class="form-group">
+                                          <span class="exp_month col-xs-6">
+                                                     
+                                                      <select name="language" class="form-control">
+                                                          <option value="January">JAN</option>
+                                                          <option value="February">FEB</option>
+                                                          <option value="March">MAR</option>
+                                                          <option value="April">APR</option>
+                                                          <option value="May">MAY</option>
+                                                          <option value="July">JUL</option>
+                                                          <option value="August">AUG</option>
+                                                          <option value="September">SEP</option>
+                                                          <option value="Octuber">OCT</option>
+                                                          <option value="November">NOV</option>
+                                                          <option value="December">DEC</option>    
+                                                      </select>
+                                                 
+                                                  </span>
+                                                  
+                                                  <span class="exp_year col-xs-6">
+                                                      <select name="language" class="form-control">
+                                                          <option value="2015">2015</option>
+                                                          <option value="2016">2016</option>
+                                                          <option value="2017">2017</option>
+                                                          <option value="2018">2018</option>
+                                                          <option value="2019">2019</option>
+                                                          <option value="2020">2020</option>
+                                                      </select>
+                                                      </span>
+                                              </div>
+                                              
+                                              </span>
+                                            <span class="col-xs-4 col-md-4">
+                                            <div class="form-group ">
+                                           <!-- <div class="col-xs-2 col-md-2 "> -->
+                                              <label for="cardCVC col-xs-4 col-md-4"> Verification Number*</label>
+                                              </div>
+                                            <div class="form-group ">
+
+                                          <!--  <div class="form-group "> -->
+                                                
+                                                  <input 
+                                                      type="tel" 
+                                                      class="form-control"
+                                                      name="cardCVC"
+                                                      placeholder="CVC"
+                                                      autocomplete="cc-csc"
+                                                      required
+                                                  />
+                                                  <a href="#">Whats this</a>
+                                              </div>
+                                           </div> <!--cols 12 -->
+                                     </div>  <!-- row -->
+                                   <!--    </div>
+                                      </div> -->
+
+
+
+                                      <div class="row">
+                                          <div class="col-xs-12">
+                                              <div class="form-group">
+                                                  <label for="card_addres"> Billing Address * </label>
+                                                  <input type="text" class="form-control" name="card_address" placeholder="Billing Address"/>
+                                              </div>
+                                          </div> 
+                                          <div class="col-xs-12">
+                                              <div class="form-group">
+
+                                                  <span class="pay_ciudad col-xs-6">
+                                                  <label for="card_addres"> City </label>
+                                                  <input type="text" class="form-control" name="card_city" placeholder="City"/></span>    <span class="pay_zip col-xs-3">
+                                                  <label for="card_addres"> Zip Code </label>
+                                                  <input type="text" class="form-control" name="card_zip" placeholder="Zip Code"/></span>
+
+
+                                              </div>
+                                          </div>                       
+                                      </div>
+                                      <br/>
+                                      <legend class="col-xs-12"></legend>
+                                     
+                                      <div class="row">
+                                          <div class="col-xs-12">
+                                              <button class="btn btn-success btn-lg btn-block" type="submit">Pay NOW</button>
+                                          </div>
+                                      </div>
+
+                                      <div class="row" style="display:none;">
+                                          <div class="col-xs-12">
+                                              <p class="payment-errors"></p>
+                                          </div>
+                                      </div>
+
+                                  </form>
+                              </div>
+                          </div>            
+                          <!-- CREDIT CARD FORM ENDS HERE -->
+                          
+                          
+                      </div> <!-- col-xs-12 col-md-4 -->
+
+                       
+                </div>  <!-- row -->
+                    <!-- </form> -->
+                    <!-- form end -->
+              </div> 
+                  <!-- containr -->
+
+               
+           </div>   <!-- form-group -->
+         </div> <!-- modal body -->
+      </div> <!-- modal-content -->
+    </div> <!-- modal-dialog -->
+</div> <!-- "modal fade"  -->
+
+<!-- modal for detail item --> 
+
+<div class="modal-body">
+
+ <div class="text-center" style="padding:50px 0">
+   <div class="logo">logotipo </div>
+
+   <div class="modal fade" id="detalles_item_modal" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+          <h4 class="modal-title" id="myModalLabel">DETAILS</h4>
+        </div>
+
+        <div class="panel panel-default">
+          <div class="panel-body">
+            <!-- bloque izquierda item -->
+            <span class="place col-xs-4">
+             <!-- <img class="pull-left" src="imagen.jpg" class="img-rounded" alt="" width="70" height="60"><![[place.image]]--> 
+             <img class="img-responsive img-centered img-rounded" src="/img/menu/queso_loroco.jpeg" alt="">
+           </span> 
+           <!-- bloque central item -->
+           <span class="place col-xs-8">
+             <h3 class="panel-title place">Queso con Loroco </h3> <!--[[menu.item]] --><!-- [[price]]--><span class='price'>$0.75 </span>  
+             <span> 
+
+              <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
+
+            </span> 
+          </span>
+          <span class="palce col-xs-4 pull right">
+            <div class="input-group quantity">
+             <span class="input-group-btn">
+               <button type="button" class="btn btn-default btn-number" disabled="disabled" data-type="minus" data-field="quant[1]">
+                 <span class="glyphicon glyphicon-minus"></span>
+               </button>
+             </span>
+             <input type="text" name="quant[1]" class="form-control input-number" value="1" min="1" max="10">
+             <span class="input-group-btn">
+               <button type="button" class="btn btn-default btn-number" data-type="plus" data-field="quant[1]">
+                 <span class="glyphicon glyphicon-plus"></span>
+               </button>
+             </span>
+           </div>
+        </span>  <!--span for last col  -->
+        <button type="button" class="btn btn-success btn-md col-xs-7 pull-right">
+            <span class="glyphicon glyphicon-cutlery"></span> Order
+          </button>
+      </div>
+    </div> <!-- panel of modal end -->
+
+    
+
+  </div>
+</div>
+
+</div> <!--modal fade -->
+</div> <!--  div class logo -->
+</div> <!-- modal end -->
+</body>
+
+

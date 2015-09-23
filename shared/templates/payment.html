@@ -1,0 +1,37 @@
+<form class="form-horizontal" id='payment_selection_form'>
+<fieldset>
+
+<!-- Form Name -->
+<legend>Form Name</legend>
+
+<div><br><br><br>SPACE TO SHOW FINAL ORDER DETAILS<br><br><br></div>
+<!-- Multiple Radios -->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="confirm_pago">Forma de Pago:</label>
+  <div class="col-md-4">
+  <div class="radio">
+    <label for="confirm_pago-0">
+      <input type="radio" name="confirm_pago" id="confirm_pago-0" value="Efectivo en Mano." checked="checked">
+      Efectivo en Mano.
+    </label>
+	</div>
+  <div class="radio">
+    <label for="confirm_pago-1">
+      <input type="radio" name="confirm_pago" id="confirm_pago-1" value="Tarjeta de Debito/Credito">
+      Tarjeta de Debito/Credito
+    </label>
+	</div>
+  </div>
+</div>
+
+<!-- Button (Double) -->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="confirm_regresar"></label>
+  <div class="col-md-8">
+    <button type="button" id="confirm_regresar" name="confirm_regresar" class="btn btn-danger">Regresar</button>
+    <button type="submit" id="confirm_confirmar" name="confirm_confirmar" class="btn btn-primary">CONFIRMAR ORDEN</button>
+  </div>
+</div>
+
+</fieldset>
+</form>

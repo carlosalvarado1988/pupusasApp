@@ -1,0 +1,214 @@
+
+<style>
+
+.header {
+		/*border: 2px solid red;*/
+		margin: 1;
+}
+
+.main {
+  /*border: 2px solid blue;*/
+  margin: 1px;
+}
+
+.pull-right{
+	 /*border: 2px solid black;*/
+}
+.footer {
+    /*border: 2px solid black;*/
+ 	margin-top: 2px;
+}
+
+h1 {
+	text-align: center;
+    margin:0;
+}
+.container {
+    height: 100%;
+    overflow-y: hidden;
+}
+
+.panel {
+	margin: 2px;
+	
+}
+
+</style>
+
+   <!-- conteiner-fluid para 100% weidht-->
+<div class="container">
+
+
+		<div class="row header">
+			 <div class="panel panel-success">
+  				<div class="panel-heading"><h1>Pupuserias cerca de Santa Tecla</h1>
+  				</div>
+ 				 <div class="panel-body"> <input class="form-control input-lg" id="inputlg" type="text" placeholder="Search Pupuseria">
+  				</div>
+  			</div>
+  		</div>
+
+
+    <div class="row main">
+
+		<div class="panel panel-default">
+ 				 <div class="panel-body">
+ 				 	<span class="place col-xs-3"><img class="img-responsive img-rounded pull-left" src="/img/places/la_paciencia.jpeg" alt="" width="100" height="80">
+ 				 	</span> 
+ 				 	<span class="place col-xs-7">
+ 				 	<h3 class="panel-title place">La Paciencia</h3>
+ 				 	<br><li>
+ 				 	<!-- <a class="pull right" href="#"> -->
+ 				 	<span><a href="#" class="page-scroll" data-toggle="modal" data-target="#basicModal"><button type="button" class="btn btn-default btn-sm">About</button></a></span><span>
+        			<button type="button" id="place_selected" class="btn btn-success btn-sm">
+          <span class="glyphicon glyphicon-cutlery"></span> Select this
+        </button></li>
+ 				 	
+
+ 				 	</span> 
+ 				 	<span class="place col-xs-2">
+ 				 		
+ 				 			<span class='badge'>1</span>
+ 				 			<br><br>Address
+ 				 			<a class="pull right" href="#">
+          						<span class="glyphicon glyphicon-map-marker"></span>
+        						</a>
+        					
+        			</span> 
+					</div>
+		</div>
+
+		<div class="panel panel-default">
+ 				 <div class="panel-body">
+ 				 	<span class="place col-xs-3"><img class="pull-left" src="/img/places/los_gemelos.jpeg" class="img-rounded" alt="[[place.image]]" width="100" height="80">
+ 				 	</span> 
+ 				 	<span class="place col-xs-7">
+ 				 	<h3 class="panel-title place">Los Gemelos</h3>
+ 				 	<br><li><a class="pull right" href="#">About</a></li>
+        			<li><button type="button" class="btn btn-default btn-sm">
+          <span class="glyphicon glyphicon-cutlery"></span> Select this
+        </button></li>
+ 				 	
+
+ 				 	</span> 
+ 				 	<span class="place col-xs-2">
+ 				 		
+ 				 			<span class='badge'>2</span>
+ 				 			<br><br>[[Address]]
+ 				 			<a class="pull right" href="#">
+          						<span class="glyphicon glyphicon-map-marker"></span>
+        						</a>
+        					
+        			</span> 
+					</div>
+		</div>
+
+		<!-- <div class="panel panel-default">
+ 				 <div class="panel-body">
+ 				 	<span class="place col-xs-3"><img class="pull-left" src="imagen.jpg" class="/img/places/hola_hola.jpeg" alt="Cinque Terre" width="100" height=20%></span> 
+ 				 	<span class="place col-xs-7">Address</span> 
+ 				 	<span class="place col-xs-2">
+ 				 		<ul>
+ 				 			<li><a class="pull right" href="#">
+          						<span class="glyphicon glyphicon-map-marker"></span>
+        						</a>
+        					</li>
+        					<li><a class="pull right" href="#">About</a></li>
+        					<li>Ordenar</li>
+        			</span> 
+					</div>
+		</div> -->
+
+		<div class="panel panel-default">
+ 				 <div class="panel-body">
+ 				 	<span class="place col-xs-3"><img class="pull-left" src="/img/places/hola_hola.jpeg" class="img-rounded" alt="[[place.image]]" width="100" height="80">
+ 				 	</span> 
+ 				 	<span class="place col-xs-7">
+ 				 	<h3 class="panel-title place">Hola Hola </h3>
+ 				 	<br>
+ 				 	<li><span><a class="pull right" href="#"><button type="button" class="btn btn-default btn-sm">About</button></a></span><span>
+        			<button type="button" class="btn btn-success btn-sm">
+          <span class="glyphicon glyphicon-cutlery"></span> Select this
+        </button><</li>
+ 				 	
+
+ 				 	</span> 
+ 				 	<span class="place col-xs-2">
+ 				 		
+ 				 			<span class='badge'>3 [[id]]</span>
+ 				 			<br><br>[[Address]]
+ 				 			<a class="pull right" href="#">
+          						<span class="glyphicon glyphicon-map-marker"></span>
+        						</a>
+        					
+        			</span> 
+					</div>
+		</div>
+
+		
+
+
+	<!-- // colocar la lista como TODO -->
+	<!-- <div class="row places">
+		<div class="col-xs-12">
+			<ul class="list-group-group"> 
+		  		<li class="list-group-item"> Aqui se carga el Template de pupuseria </li>
+		  		<li class="list-group-item"> Aqui se carga el Template de pupuseria </li>
+		  		<li class="list-group-item"> Aqui se carga el Template de pupuseria </li>
+		  		
+		  	</ul></div> -->
+		  
+	
+		<div class="footer">
+				<div class="logo-footer" align="center"> logo for footer </div>
+		</div>
+
+	
+</div>
+
+ <!-- modal div starts here -->
+					<div class="modal-body">
+								        
+						 <div class="text-center" style="padding:50px 0">
+								  					<div class="logo">logotipo </div>
+
+								<div class="modal fade" id="basicModal" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
+								  		<div class="modal-dialog">
+								    <div class="modal-content">
+								      <div class="modal-header">
+								        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+								        <h4 class="modal-title" id="myModalLabel">About</h4>
+								      </div>
+
+								      <div class="panel panel-default">
+		  										<div class="panel-body">
+		  										<!-- bloque izquierda item -->
+		  										<span class="place col-xs-4">
+		  											<!-- <img class="pull-left" src="imagen.jpg" class="img-rounded" alt="" width="70" height="60"><!-- [[place.image]]--> 
+		  											<img class="img-responsive img-centered img-rounded" src="/img/places/la_paciencia.jpeg" alt="">
+ 				 								</span> 
+ 				 								<!-- bloque central item -->
+ 				 									<span class="place col-xs-8">
+ 				 								 <h3 class="panel-title place">Restaurante XXXX </h3> <!--[[menu.item]] --><!-- [[price]]-->
+ 				 									     <span> 
+ 				 								
+                            <p>Use this area to describe your project. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est blanditiis dolorem culpa incidunt minus dignissimos deserunt repellat aperiam quasi sunt officia expedita beatae cupiditate, maiores repudiandae, nostrum, reiciendis facere nemo!</p>
+        										
+ 				 							</span> 
+ 				 								</span>
+ 													   <span class="selec_place col-xs-6 pull-right">
+													      <button type="button" class="btn btn-success btn-md col-xs-6">
+          												<span class="glyphicon glyphicon-cutlery"></span> Select this
+        												</button>
+        													 </span>  <!--span for last col  -->
+        												</div>
+        									 </div> <!-- panel of modal end -->
+
+    
+
+												</div>
+												      </div>
+												      
+   									  </div> <!--modal fade -->
+ 								 </div> <!--  div class logo -->
+						 </div> <!-- modal end -->
