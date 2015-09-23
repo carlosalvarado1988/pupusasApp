@@ -104,6 +104,8 @@ app.use(require('log_controllers'));
 var p = path.resolve(__dirname + '/public/assets');
 app.use(express.static(p));
 
-app.listen(3000);
+var port = (process.env.PORT ? process.env.PORT : 3000);
+
+app.listen(port);
 
 
